@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "out": "next build && next export"
   },
   "dependencies": {
     "@iconify/icons-logos": "^1.0.12",
@@ -13,10 +14,14 @@
     "cirrus-ui": "^0.5.5",
     "fontsource-roboto": "^3.0.3",
     "next": "9.5.3",
+    "pure-react-carousel": "^1.27.4",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-slick": "^0.27.11",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
+    "@iconify/icons-fa": "^1.0.3",
     "@iconify/react": "^1.1.3"
   }
 }

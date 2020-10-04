@@ -1,8 +1,39 @@
+import { useState, useEffect } from "react"
 import {blackColor} from "../styles/colors";
 import { Icon } from '@iconify/react';
 import iconsMap from './iconsMap';
+import {useMenuItemsContext} from'../context';
 
-export default function MenuBar() {
+export default React.memo(function MenuBar() {
+    const [scroll, setScroll] = useState(1)
+    const [menuItems, dispatch] = useMenuItemsContext();
+ 
+    useEffect(() => {
+      const onScroll = () => {
+          setScroll(window.scrollY)
+      }
+
+    document.addEventListener("scroll", onScroll)
+    
+     return () => {
+       document.removeEventListener("scroll", onScroll)
+      }
+    }, [scroll])
+
+    useEffect(() => {
+
+    }, [menuItems]);
+
+    let active = "";
+    let prev = 0;
+    Object.keys(menuItems).forEach((key) => {
+      const item = menuItems[key];
+      if(scroll+150 >= item.current.offsetTop && prev < item.current.offsetTop) {
+        active = key;
+        prev =  item.current.offsetTop;
+      }
+    })
+
   return (
     <div>
       <style jsx>
@@ -20,9 +51,7 @@ export default function MenuBar() {
           }
 
           .linkedin-span {
-            background-color: white;
             display: inline-block;
-            border-right: 1px solid black;
           }
         `}
       </style>
@@ -31,33 +60,37 @@ export default function MenuBar() {
             <div className="nav-item no-hover">
                 <a><h6 className="title">Andres Garcia</h6></a>
             </div>
-            <div class="nav-item">
-              <span className="linkedin-span">
+            <div class="nav-item no-hover">
                 <a href="https://github.com/andres-thefirst" target="_blank">
-                    <Icon icon={iconsMap["github"].icon} style={{width: "50px", height: "50px"}}/>
+                    <Icon icon={iconsMap["github"].icon} style={{width: "40px", height: "40px"}}/>
                 </a>
-              </span>
-              <span className="linkedin-span">
+              </div>
+              <div class="nav-item no-hover">
                 <a href="https://www.linkedin.com/in/andr%C3%A9s-no%C3%A9-garc%C3%ADa-medrano-866264b9/" target="_blank">
-                    <Icon icon={iconsMap["linkedin"].icon} style={{width: "50px", height: "50px"}}/>
+                    <Icon icon={iconsMap["linkedin"].icon} style={{width: "40px", height: "40px"}}/>
                 </a>
-              </span>
-          </div>
+              </div>
         </div>
       <div className="header-nav" id="header-menu">
             <div className="nav-right">
-                <div className="nav-item active">
-                    <a href="#">Profile</a>
+                <div className={`nav-item ${active === 'about-me' ? 'active' : ''}`}>
+                    <a href="#about-me">About Me</a>
                 </div>
-                <div className="nav-item">
-                    <a href="#">Fresh Technology Stack</a>
+                <div className={`nav-item ${active === 'skills' ? 'active' : ''}`}>
+                    <a href="#skills">Skills</a>
                 </div>
-                <div className="nav-item">
-                  <a href="#">Professional Experience</a>
+                <div className={`nav-item ${active === 'experience' ? 'active' : ''}`}>
+                    <a href="#experience">Professional Experience</a>
+                </div>
+                <div className={`nav-item ${active === 'technology' ? 'active' : ''}`}>
+                    <a href="#technology">Fresh Technology Stack</a>
+                </div>
+                <div className={`nav-item ${active === 'education' ? 'active' : ''}`}>
+                  <a href="#education">Education and Hobbies</a>
                 </div>
             </div>
         </div>
     </div>
   </div>
   )
-}
+})

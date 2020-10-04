@@ -1,4 +1,7 @@
-export default function Skills() {
+import {useMenuItems} from'../context';
+import { useRef } from "react";
+
+export default React.memo(function Skills() {
   const info = [
     "Develop, test and deploy new functionalities.",
     "Create code readable, maintainable and scalable.",
@@ -18,7 +21,10 @@ export default function Skills() {
   "CI/CD: General concepts, Tools (Bamboo, Jenkins)",
   "Containers: General understanding.",
   "Work with agile methodologies",
-  ]
+  ];
+  const id = "skills"
+  const sectionEL = useRef(null);
+  useMenuItems(id, sectionEL);
 
   return (
     <>
@@ -31,7 +37,7 @@ export default function Skills() {
       `
     }
     </style>
-    <section className="skills panel">
+    <section ref={sectionEL} id={id} className="skills panel">
       <div className="content">
         <h2>Skills</h2>
         <div className="divider"/>
@@ -59,4 +65,4 @@ export default function Skills() {
     </section>
     </>
   )
-}
+});

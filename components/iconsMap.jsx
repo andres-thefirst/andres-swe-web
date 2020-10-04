@@ -38,7 +38,7 @@ import vueIcon from '@iconify/icons-logos/vue';
 import svelteIcon from '@iconify/icons-logos/svelte-icon';
 import graphqlIcon from '@iconify/icons-logos/graphql';
 import sassIcon from '@iconify/icons-logos/sass';
-import githubOctocat from '@iconify/icons-logos/github-octocat';
+import githubIcon from '@iconify/icons-fa/github';
 import jestIcon from '@iconify/icons-logos/jest';
 import javascriptIcon from '@iconify/icons-logos/javascript';
 import apacheIcon from '@iconify/icons-logos/apache';
@@ -50,7 +50,7 @@ import expressIcon from '@iconify/icons-logos/express';
 import loopbackIcon from '@iconify/icons-logos/loopback';
 import riotIcon from '@iconify/icons-logos/riot';
 import nextjsIcon from '@iconify/icons-logos/nextjs';
-import linkedinIcon from '@iconify/icons-logos/linkedin';
+import linkedinSquare from '@iconify/icons-fa/linkedin-square';
 
 
 export default {
@@ -215,7 +215,7 @@ export default {
     name: "Svelte"
   },
   github: {
-    icon: githubOctocat,
+    icon: githubIcon,
     name: "Git"
   },
   jest: {
@@ -263,7 +263,7 @@ export default {
     name: "Next.js"
   },
   linkedin: {
-    icon: linkedinIcon,
+    icon: linkedinSquare,
     name: "Linkedin"
   }
 };

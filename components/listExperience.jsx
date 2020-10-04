@@ -5,7 +5,7 @@ export default [
     project: "Twitter",
     date: "April 2019 - Current",
     description: <p>Create various twitter internal tools. Create technical design documents. Automate processes scheduling jobs/workers.</p>,
-    techList: ["scala", "react", "go", "dynamodb", "redis", "html5", "css3", "github", "docker", "intelliJ", "apple"]
+    techList: ["scala", "react", "js", "go", "dynamodb", "redis", "html5", "css3", "github", "docker", "intelliJ", "apple"]
   },
   {
     position: "Technical Leader",
@@ -28,7 +28,7 @@ export default [
     company: "Globant",
     project: "Zaplabs",
     date: "June 2017 - December 2017",
-    description: <p>"Maintain back office to help agents in the creation of personal blogs to improve the contact with their customers."</p>,
+    description: <p>Maintain back office to help agents in the creation of personal blogs to improve the contact with their customers.</p>,
     techList: ["js","riot", "java", "spring", "karma", "sass", "html5", "css3", "github", "docker", "windows"]
   },
   {

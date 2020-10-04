@@ -1,6 +1,13 @@
-export default function Other() {
+import {useMenuItems} from'../context';
+import { useRef } from "react";
+
+export default React.memo(function Other() {
+  const id = "education";
+  const sectionEL = useRef(null);
+  useMenuItems(id, sectionEL);
+
   return (
-    <section className="other panel">
+    <section ref={sectionEL} id={id} className="other panel">
       <div className="row content">
         <div className="col-6">
           <h2>Education</h2>
@@ -28,4 +35,4 @@ export default function Other() {
     </div>
     </section>
   );
-}
+});

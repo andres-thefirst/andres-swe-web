@@ -1,4 +1,7 @@
-export default function TechStack() {
+import {useMenuItems} from'../context';
+import { useRef } from "react";
+
+export default React.memo(function TechStack() {
   const info = [
     "Frontend: Javascript, Angular 7+, Reac.jst, Unstated.js, Redux.js, RxJS, GraphQL, Jasmine, Mocha, Jest, Enzyme, Cypress.io, NPM, Webpack, Material UI, Sass",
     "Backend: Go, GoConvey, GoTesting, Scala, ScalaTest, Python, Django, Django Rest Framework, Node.js, Express.js, Mongoose, SuperTest",
@@ -6,6 +9,9 @@ export default function TechStack() {
     "Mobile: React Native, React Native Elements, React Navigation, Expo",
     "Other: BigQuery, Postgres, Redis, Docker."
   ]
+  const id = "technology";
+  const sectionEL = useRef(null);
+  useMenuItems(id, sectionEL);
 
   return (
     <>
@@ -18,7 +24,7 @@ export default function TechStack() {
       `
     }
     </style>
-    <section className="tech-stack  panel">
+    <section ref={sectionEL} id={id} className="tech-stack  panel">
       <div className="content">
         <h2>Fresh Technology Stack</h2>
         <div className="divider"/>
@@ -46,4 +52,4 @@ export default function TechStack() {
     </section>
     </>
   )
-}
+});
