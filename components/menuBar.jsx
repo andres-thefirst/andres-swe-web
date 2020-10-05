@@ -85,6 +85,9 @@ export default React.memo(function MenuBar() {
                 <div className={`nav-item ${active === 'technology' ? 'active' : ''}`}>
                     <a href="#technology">Fresh Technology Stack</a>
                 </div>
+                <div className={`nav-item ${active === 'courses' ? 'active' : ''}`}>
+                    <a href="#courses">Courses</a>
+                </div>
                 <div className={`nav-item ${active === 'education' ? 'active' : ''}`}>
                   <a href="#education">Education and Hobbies</a>
                 </div>

@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import { Icon } from '@iconify/react';
 
 import listExperience from './listExperience';
@@ -18,6 +18,15 @@ export default React.memo(function Experience() {
     slidesToScroll: 3,
     slidesToShow: 3,
     lazyLoad: true,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
 
   return (

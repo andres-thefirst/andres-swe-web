@@ -5,12 +5,14 @@ import AboutMe from '../components/aboutMe';
 import Skills from '../components/Skills';
 import Experience from '../components/experience';
 import TechStack from '../components/techStack';
+import Courses from '../components/courses';
 import Other from "../components/other";
 import Footer from "../components/footer";
 import {StateMenuItemsContext} from'../context';
 import {blackColor} from "../styles/colors";
 
 export default function Home() {
+  
   return (
     <>
     <Head>
@@ -27,7 +29,7 @@ export default function Home() {
     {`
       #splash-img {
         background-color: ${blackColor};
-        background-image: url("sf_city.jpg");
+        background-image: url("sf_city.webp");
       }
       .main-title {
         background-color: rgba(0, 0, 0, .3);
@@ -48,6 +50,7 @@ export default function Home() {
     <Skills/>
     <Experience/>
     <TechStack />
+    <Courses />
     <Other/>
   </StateMenuItemsContext>
   <Footer />

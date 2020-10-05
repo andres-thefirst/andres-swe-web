@@ -11,14 +11,14 @@ export default React.memo(function AboutMe() {
     <div className="row content">
       <div className="col-12">
         <figure class="avatar avatar--xlarge avatar-me">
-          <img src="angm.jpg" />
+          <img loading="lazy" src="angm.webp" />
         </figure>
       </div>
       <div className="col-6">
             <h2>Summary</h2>
             <div className="divider"/>
             <p>
-            Andrés has 10 years of experience developing software professionally, with a degree in Computer Systems he is a versatile 
+            Andrés has 10 years of experience developing software professionally, with a bachelor degree in Computer Systems he is a versatile 
             Software Engineer with a strong knowledge of software design and architectures. Andrés has experience as a tech leader, 
             coordinating teams both onshore & offshore to ensure timely delivery with great quality. 
             </p>
