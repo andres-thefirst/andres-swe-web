@@ -4,35 +4,48 @@ import Slider from "react-slick";
 
 const certificates = [
   {
-    src: "AlgoExpert_Certificate.webp",
+    srcSlick: "AlgoExpert_Certificate_slick.webp",
+    srcModal: "AlgoExpert_Certificate_modal.webp",
     name: "AlgoExpert certificate"
   },
   {
-    src: "Hackerrank.webp",
+    srcSlick: "hackerrank_slick.webp",
+    srcModal: "hackerrank_modal.webp",
     name: "Hackerrank certificate"
   },
   {
-  src: "advante-react-and-redux.jpg",
+    srcSlick: "aws-serverless-apis-and-apps_slick.webp",
+    srcModal: "aws-serverless-apis-and-apps_modal.webp",
+    name: "AWS serverless APIs & Apps"
+  },
+  {
+  srcSlick: "advante-react-and-redux_slick.webp",
+  srcModal: "advante-react-and-redux_modal.webp",
   name: "Advance React and redux certificate"
 },
 {
-  src: "react-native-advanced-concepts.jpg",
+  srcSlick: "react-native-advanced-concepts_slick.webp",
+  srcModal: "react-native-advanced-concepts_modal.webp",
   name: "React native advanced concetps certificate"
 },
 {
-  src: "the-comple-node-developer-course.jpg",
+  srcSlick: "the-comple-node-developer-course_slick.webp",
+  srcModal: "the-comple-node-developer-course_modal.webp",
   name: "The complete node.js developer course certificate"
 },
 {
-  src: "the-complete-develooers-guide-to-mongodb.jpg",
+  srcSlick: "the-complete-developers-guide-to-mongodb_slick.webp",
+  srcModal: "the-complete-developers-guide-to-mongodb_modal.webp",
   name: "The complete developers guide to mongodb certificate"
 }, 
 {
-  src: "the-complete-react-native-hooks-course.jpg",
+  srcSlick: "the-complete-react-native-hooks-course_slick.webp",
+  srcModal: "the-complete-react-native-hooks-course_modal.webp",
   name: "The complete react native and hooks course certificate"
 },
 {
-  src: "the-modern-graphql-bootcamp.jpg",
+  srcSlick: "the-modern-graphql-bootcamp_slick.webp",
+  srcModal: "the-modern-graphql-bootcamp_modal.webp",
   name: "The modern graphql bootcamp certificate"
 }];
 
@@ -41,14 +54,14 @@ export default React.memo(function Courses() {
   const id = "courses";
   const sectionEL = useRef(null);
   useMenuItems(id, sectionEL);
-  const [certificate, onCertificate] = useState(certificates[0]);
+  const [certificate, onCertificate] = useState(null);
 
   const settings = {
     customPaging: function(i) {
-      const {src, name} = certificates[i];
+      const {srcSlick, name} = certificates[i];
       return (
-        <a aria-role="button">
-          <img loading="lazy" src={src} alt={name} width="50px" height="50px"/>
+        <a role="button">
+          <img loading="lazy" src={srcSlick} alt={name} width="50px" height="50px"/>
         </a>
       );
     },
@@ -106,9 +119,9 @@ export default React.memo(function Courses() {
       <div className="courses">
       <Slider {...settings}>
         {certificates.map(item => (
-          <div key={item.src.substring(0, 10)} className="item">
+          <div key={item.srcSlick.substring(0, 10)} className="item">
             <a href="#modal-id" onClick={() => onCertificate(item)}>
-              <img loading="lazy" src={item.src} alt={item.name} />
+              <img loading="lazy" src={item.srcSlick} alt={item.name} />
             </a>
           </div>
           )
@@ -116,12 +129,12 @@ export default React.memo(function Courses() {
       </Slider>
       </div>
       <div className="modal modal-large modal-animated--zoom-in"  id="modal-id">
-          <a href="#NON-EXISTANT-DIV" className="modal-overlay close-btn" aria-label="Close"></a>
-          <div className="modal-content" role="document">
+          <a href="#NON-EXISTANT-DIV" className="modal-overlay close-btn" aria-label="Close" onClick={() => onCertificate(null)}></a>
+          {certificate && <div className="modal-content" role="document">
               <div className="modal-body">
-                <img loading="lazy" src={certificate.src} alt={certificate.name} className="certificate-image"/>
+                <img loading="lazy" src={certificate.srcModal} alt={certificate.name} className="certificate-image"/>
               </div>
-          </div>
+          </div>}
       </div>
     </section>
     </>

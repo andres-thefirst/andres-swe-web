@@ -10,8 +10,8 @@ export default React.memo(function AboutMe() {
   <section ref={sectionEL} className="panel" id={id}>
     <div className="row content">
       <div className="col-12">
-        <figure class="avatar avatar--xlarge avatar-me">
-          <img loading="lazy" src="angm.webp" />
+        <figure className="avatar avatar--xlarge avatar-me">
+          <img loading="lazy" src="angm.webp" alt="andres garcia"/>
         </figure>
       </div>
       <div className="col-6">
@@ -19,15 +19,15 @@ export default React.memo(function AboutMe() {
             <div className="divider"/>
             <p>
             Andrés has 10 years of experience developing software professionally, with a bachelor degree in Computer Systems he is a versatile 
-            Software Engineer with a strong knowledge of software design and architectures. Andrés has experience as a tech leader, 
-            coordinating teams both onshore & offshore to ensure timely delivery with great quality. 
+            Software Engineer with a strong knowledge of software design. Andrés has experience as a tech leader, 
+            coordinating teams both onshore & offshore to ensure timely delivery with great quality.
             </p>
           </div>
       <div className="col-6">
       <h2>Objective</h2>
       <div className="divider"/>
         <p>
-          Become a referent in software development, creating innovative, challenging and excellent systems that generate solutions to the industry and mankind
+          Become a referent in software development, creating innovative, challenging and excellent systems that generate solutions to the industry and mankind.
         </p>
       </div>
     </div>

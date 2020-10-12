@@ -19,3 +19,9 @@
   overflow-y: none;
   max-height: 60vh;
 }
+#experience .slick-slide {
+  display: none;
+}
+#experience .slick-slide.slick-cloned {
+  display: block;
+}

@@ -12,7 +12,7 @@ export default [
     company: "Globant",
     project: "Realogy",
     date: "October  2018 - April 2019",
-    description: <p>Participate in the creation of a platform that acts as the central point from which users can manage their email, contacts, marketing, profiles and create market reports. (Demo: <a href="https://www.youtube.com/watch?v=Sr2tjGRECQk&feature=youtu.be" target="_blank">Desk</a>)</p>,
+    description: <p>Participate in the creation of a platform that acts as the central point from which users can manage their email, contacts, marketing, profiles and create market reports. (Demo: <a href="https://www.youtube.com/watch?v=Sr2tjGRECQk&feature=youtu.be" target="_blank" rel="noopener noreferrer">Desk</a>)</p>,
     techList: ["typescript", "angular", "python", "django", "graphql", "redux", "reactivex", "sass", "html5", "css3", "postgresql","intelliJ", "github", "docker", "apple"]
   },
   {
@@ -36,7 +36,7 @@ export default [
     company: "Globant",
     project: "Ebay",
     date: "January 2017 - June 2017",
-    description: <p>Replatform legacy <a href="https://www.vivanuncios.com.mx" target="_blank">Vivanuncios</a></p>,
+    description: <p>Replatform legacy <a href="https://www.vivanuncios.com.mx" target="_blank" rel="noopener noreferrer">Vivanuncios</a>.</p>,
     techList: ["js","nodejs", "express", "karma", "jquery", "html5", "css3", "github", "apple"]
   },
   {
@@ -44,7 +44,7 @@ export default [
     company: "Globant",
     project: "Autodesk Fusion Lifecycle",
     date: "June 2016 - December 2016",
-    description: <p>Replatform legacy <a href="https://www.autodeskfusionlifecycle.com">Autodesk</a></p>,
+    description: <p>Replatform legacy <a href="https://www.autodeskfusionlifecycle.com" rel="noopener noreferrer">Autodesk</a>.</p>,
     techList: ["js","angular", "jasmine", "karma", "sass", "html5", "css3", "github", "windows"]
   },
   {
@@ -52,7 +52,7 @@ export default [
     company: "Globant",
     project: "Cars.com",
     date: "January 2016 - June 2016",
-    description: <p>Replatform legacy <a href="https://www.cars.com/">cars.com</a></p>,
+    description: <p>Replatform legacy <a href="https://www.cars.com/" rel="noopener noreferrer">cars.com</a>.</p>,
     techList: ["js", "java","angular","nodejs", "java","spring", "html5", "css3", "github", "apple"]
   },
   {

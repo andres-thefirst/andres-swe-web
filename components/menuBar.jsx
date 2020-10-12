@@ -20,10 +20,6 @@ export default React.memo(function MenuBar() {
       }
     }, [scroll])
 
-    useEffect(() => {
-
-    }, [menuItems]);
-
     let active = "";
     let prev = 0;
     Object.keys(menuItems).forEach((key) => {
@@ -58,15 +54,21 @@ export default React.memo(function MenuBar() {
       <div className="header header-fixed unselectable header-animated">
         <div className="header-brand">
             <div className="nav-item no-hover">
-                <a><h6 className="title">Andres Garcia</h6></a>
+                <span><h6 className="title">Andres Garcia</h6></span>
             </div>
-            <div class="nav-item no-hover">
-                <a href="https://github.com/andres-thefirst" target="_blank">
+            <div className="nav-item no-hover">
+                <a href="https://github.com/andres-thefirst" 
+                  aria-label="andres github" 
+                  target="_blank" 
+                  rel="noopener noreferrer">
                     <Icon icon={iconsMap["github"].icon} style={{width: "40px", height: "40px"}}/>
                 </a>
               </div>
-              <div class="nav-item no-hover">
-                <a href="https://www.linkedin.com/in/andr%C3%A9s-no%C3%A9-garc%C3%ADa-medrano-866264b9/" target="_blank">
+              <div className="nav-item no-hover">
+                <a href="https://www.linkedin.com/in/andr%C3%A9s-no%C3%A9-garc%C3%ADa-medrano-866264b9/" 
+                  target="_blank" 
+                  aria-label="andres linkedin" 
+                  rel="noopener noreferrer">
                     <Icon icon={iconsMap["linkedin"].icon} style={{width: "40px", height: "40px"}}/>
                 </a>
               </div>
